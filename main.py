@@ -1,14 +1,15 @@
 """
 Chatbot
-Author: 
-Period/Core: 
+Author: Sage Lammlein
+Period/Core: Core 7
 
 """
 
 import os
 import importlib.util
 
-import random
+
+
 
 def run_tests():
   """
@@ -24,6 +25,8 @@ def run_tests():
 
 def main():
   """This function contains all code for the chatbot."""
+  import random
+  number = random.randint(1,20)
   print("Hello!")
   name = input("What is your first name? ")
   lastname = input("What is your last name? ")
@@ -46,18 +49,22 @@ def main():
   if (nickname == "yes"):
     what_nickname = input("What is it? ")
     print("Wow. I like that nickname.")
-  season = input("What is your favorite season, "+name+"? ")
-  if(season == "winter"):
-    print("I love how the trees look when it snows. Winter is definitely a pretty season.")
-  elif(season == "fall"):
-    print("I love fall! The way the leaves look when they change is my favorite part.")
-  elif(season == "spring"):
-    print("Spring is a lovely season. My favorite part is the rain.")
-  elif(season == "summer"):
-    print("I should have guessed. Summer is a very relaxing season and it is pretty warm too.")
-  food = input("Say, "+name+". What is your favorite food? ")
-  if(food == "")
-
+  if(number < 10):
+    season = input("What is your favorite season, "+name+"? ")
+    if(season == "winter"):
+      print("I love how the trees look when it snows. Winter is definitely a pretty season.")
+    elif(season == "fall"):
+      print("I love fall! The way the leaves look when they change is my favorite part.")
+    elif(season == "spring"):
+      print("Spring is a lovely season. My favorite part is the rain.")
+    elif(season == "summer"):
+      print("I should have guessed. Summer is a very relaxing season and it is pretty warm too.")
+  else:
+    food = input("Say, "+name+". What is your favorite food? ")
+    if(food == "tacos"):
+      print("Wow, I love tacos too!")
+  print("Well it was nice talking to you, "+name+".")
+  
 
 
 if __name__ == "__main__":
